@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',   # Используется PostgreSQL
-        'NAME': 'tododb', # Имя базы данных
+        'NAME': 'postgres', # Имя базы данных
         'USER': 'postgres', # Имя пользователя
         'PASSWORD': 'root', # Пароль пользователя
-        'HOST': 'localhost', # Наименование контейнера для базы данных в Docker Compose
+        'HOST': 'db', # Наименование контейнера для базы данных в Docker Compose
         'PORT': '5432',  # Порт базы данных
     }
 }
