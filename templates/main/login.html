@@ -1,0 +1,18 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {% for f in form %}
+
+    <p class="login_form"><label for="{{ f.id_for_label }}">{{f.label}}: </label>{{f}}</p>
+    <p>{{f.errors}}</p>
+    {%endfor%}
+
+    <button id="post-order" type="submit">Войти</button>
+</form>
+<p class="pizza-desc">Нет аккаунта - <a class="a-show" href="{% url 'register' %}">Зарегистрироваться</a></p>
+</div>
+{% endblock %}

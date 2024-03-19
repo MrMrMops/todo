@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'main/css/styles.css' %}">
+
+</head>
+
+<body>
+<header>
+    <a href="{% url 'index' %}"><nav>Home</nav></a>
+    <a href="{% url 'self' %}"><nav>self</nav></a>
+   {% if user.is_authenticated%}   <a href="/todo/profile/{{link}} "><nav>profile</nav></a>{%endif%}
+    {%if not user.is_authenticated%} <a href="{% url 'login' %}"><nav>sign in</nav></a>
+    {%else%}<a href="{% url 'logout' %}"><nav>logout</nav></a>{%endif%}
+
+</header>
+<div id="title">
+
+<h1 class="title-text">{% if post.title%}{{post.title}}{%else%}{{title}}{%endif%}</h1>
+{% block title %}
+{%endblock%}
+
+</div>
+<div id="placeholder-list">
+
+{% block content %}
+{% endblock %}
+
+
+</div>
+
+<footer>
+Все права зарегистрированы мной
+</footer>
+</body>
+</html>

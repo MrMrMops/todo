@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+
+
+{% block title %}
+<div class="div-delete">
+<button class="button-add"><a href="{% url 'addtodo' %}" class="a-add">+</a></button>
+</div>
+{%endblock%}
+
+{%block content%}
+    <hr>
+{% for post in todolist %}
+<table class="article">
+    
+    <tr>
+        <td class="title"><a href="{{ post.get_absolute_url }}">{{post.title}}</a></td>
+        {% if post.photo %}
+        <td rowspan="2"><img class="photo-article" src="{{post.photo.url}}"></td>
+        {%endif%}
+    </tr>
+        <td class="content">{{post.content}}</td>
+    </tr>
+
+</table> 
+<div class="div-delete">
+<button class="button-delete"><a href="delete/{{post.id}}" class="a-delete">delete</a></button>
+<button class="button-show"><a href="{{ post.get_absolute_url }}" class="a-show">show</a></button>
+
+</div>
+<hr>    
+{% endfor %}
+
+{% endblock %}

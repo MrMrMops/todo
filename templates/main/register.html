@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<div class="placeholder-main">
+
+<form method="post"  action="{% url 'register' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% for f in register_form %}
+    <p class="login"><label for="{{ f.id_for_label }}">{{ f.label }}: </label>{{f}}</p>
+    <p>{{f.errors}}</p>
+    {% endfor%}
+    {% csrf_token %}
+    {% for f in form %}
+    <p class="login"><label for="{{ f.id_for_label }}">{{ f.label }}: </label>{{f}}</p>
+    <p>{{f.errors}}</p>
+    {% endfor%}
+
+    <button type="submit">Зарегистрироваться</button>
+</form>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="div-profile">
+  {% if profile.photo %}
+  <img class="photo-article" src="{{profile.photo.url}}">
+  {% else %}<img class="photo-article" src="{% static 'main/images/default_ava.jpg' %}">{%endif%}
+  <h1>{{profile.user.username}}</h1>
+</div>
+  <p>{{profile.bio}}</p>
+
+{% endblock %}

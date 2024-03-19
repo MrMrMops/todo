@@ -1,0 +1,154 @@
+body {
+    margin: 0%;
+    background-color: #F7F7F7;
+
+
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    background-color:#418C9E;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 25% ;
+}
+nav {
+    margin: 0px 0px 0px 30px;
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    background-color:#418C9E;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:#bde8f3
+}
+
+nav:hover {
+    background-color:#468392;
+    /* color: #7ebbca; */
+    
+    
+}
+#title {
+    margin: 0px 0px 0px 25%;
+    width: 50%;
+    padding: 0px 0 0px 0 ;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    font-size: 25px;
+    padding: 0px 0 0 0 ;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+.title-text {
+    margin: 60px 0 0 0;
+}
+
+#placeholder-list {
+    margin: 0px 0px 0px 25%;
+    background-color: #FFFFFF;
+    width: 50%;
+    height: 100%;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    font-size: 22px;
+
+    
+}
+.article {
+
+    font-size:25px;
+
+    width: 100%;
+    word-break:break-all;
+    font-family: Montserrat,Arial,"Helvetica Neue",Helvetica,sans-serif
+}
+
+
+.title {
+    height: 50px;
+    text-align: start;
+    vertical-align: text-top;
+    font-weight: bold;
+    font-size: 30px;
+}
+.content {
+    text-align: start;
+    width: 100% ;
+    vertical-align: text-top;
+}
+.photo-article {
+    width: 200px;
+}
+hr {
+    margin: 30px 0;
+}
+.button-delete {
+
+    color: #f14040;
+    border: none;
+    background-color: #ff909062;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+
+    font-size:30px;
+}
+
+.a-delete {
+    color:#f14040;
+}
+.a-add {
+    color:#1bc245;
+}
+.div-delete{
+    text-align: end;
+    padding: 5px 0px;
+}
+.button-show {
+    color: #a6ddf0c0;
+    border: none;
+    background-color: #a6def0;
+    border-radius: 30px;
+    width: 100px;
+    height: 50px;
+
+    font-size:30px;
+}
+.button-add {
+    color: #00ff40;
+    border: none;
+    background-color: #8aff9a57;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    margin: 70px 0 0 0 ;
+    font-size:30px;
+    box-sizing: border-box;
+}
+.a-show {
+    color:#0077ff;
+}
+footer {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 70px 0 0 0;
+    color:#bec0c0;
+}
+.div-profile {
+    justify-content: space-between;
+    display:flex;
+}

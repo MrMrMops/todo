@@ -1,0 +1,44 @@
+version: '3'
+
+services:
+  django:
+    container_name: django
+    build: .
+    command: sh -c "gunicorn --bind 0.0.0.0:8000 todo.wsgi"
+    ports:
+      - '8000'
+    environment:
+      - DEBUG=1
+    depends_on:
+      - db
+
+    volumes:
+      - ./:/usr/src/app/
+
+
+  db:
+    container_name: db
+    image: postgres
+    ports:
+      - "5342:5342"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    volumes:
+      - pgdata:/var/lib/postgresql/data/
+  nginx:
+    container_name: nginx
+    image: nginx
+
+    depends_on:
+      - django
+    ports:
+      - "80:80"
+    volumes:
+      - static_data:/var/www/html/static
+
+volumes:
+  pgdata:
+  static_data:
+
